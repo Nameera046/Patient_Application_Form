@@ -1,0 +1,172 @@
+
+.modal-enhanced {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(50, 50, 100, 0.5));
+  z-index: 1050;
+  overflow-y: auto;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.modal-enhanced .modal-dialog {
+  max-width: 650px;
+  width: 90%;
+  margin: 1.75rem auto;
+  transform: scale(0.95);
+  animation: scaleUp 0.4s ease-in-out forwards;
+}
+
+.modal-enhanced .modal-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  color: #000000;
+}
+
+.modal-enhanced .modal-header {
+  background: linear-gradient(90deg, #2a5298, #1e3a8a);
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 5rem;
+  overflow: visible;
+}
+
+.modal-enhanced .header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-width: 80%;
+  overflow: visible;
+}
+
+.modal-enhanced .modal-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffffff;
+  margin: 0;
+  white-space: nowrap;
+  overflow: visible;
+  text-overflow: clip;
+}
+
+.modal-enhanced .header-datetime {
+  font-size: 0.9rem;
+  color: #e0e0e0;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+.modal-enhanced .btn-close {
+  color: #ffffff;
+  opacity: 0.7;
+  font-size: 1.2rem;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  margin-top: 0.25rem;
+  z-index: 1060;
+}
+
+.modal-enhanced .btn-close:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.modal-enhanced .modal-body {
+  padding: 2rem 2.5rem;
+  background: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #000000;
+}
+
+.modal-enhanced .appointment-text {
+  line-height: 1.6;
+}
+
+.modal-enhanced .appointment-text p {
+  margin: 0.5rem 0;
+}
+
+.modal-enhanced .appointment-text strong {
+  color: #333333;
+  margin-right: 0.5rem;
+}
+
+.modal-enhanced .modal-footer {
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.modal-enhanced .btn {
+  padding: 0.85rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.modal-enhanced .btn-secondary {
+  background: linear-gradient(90deg, #4b5cc4, #6b7280);
+  color: #ffffff;
+}
+
+.modal-enhanced .btn-secondary:hover {
+  background: linear-gradient(90deg, #3b4cac, #5a6069);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-enhanced .btn-primary {
+  background: linear-gradient(90deg, #10b981, #34d399);
+  color: #ffffff;
+}
+
+.modal-enhanced .btn-primary:hover {
+  background: linear-gradient(90deg, #0e9a6d, #2dc9a0);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
